@@ -1,11 +1,21 @@
 {% include "navbar.html" %}
+{% load crispy_forms_tags %}
 <div class="container">
+    {% block content %}
     <h1>Reporter un bug</h1>
     <form method="POST">
         {% csrf_token %}
-        {{form}}
-      
-        <button class="btn btn-primary" type="submit">Envoyer</button>
+        <fieldset class="form-group">
+            {{form|crispy}}
+        </fieldset>
+        <button class="btn btn-primary" type="submit" onclick='show_alert()'>Envoyer</button>
     </form>
+    {% endblock %}
+    
 </div>
+<script>
+function show_alert() {
+    alert("Bug reported !!!");
+  }
+</script>
 {% include "footer.html" %}
