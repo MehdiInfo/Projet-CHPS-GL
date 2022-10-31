@@ -22,6 +22,9 @@ une fois votre env activé :
 ```python
 python manage.py runserver
 ```
+## Accès aux applications
+http://127.0.0.1:8000/ -> beta-testeur(rapport de bugs..etc)
+http://127.0.0.1:8000/dashboard -> pour le dashboard
 
 ## Erreur
 Si vous avez des erreurs lors de l'installation je vous conseille de mettre à jour votre python, préviligiez une version récente.
