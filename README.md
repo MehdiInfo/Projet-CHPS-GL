@@ -1,6 +1,6 @@
 # Projet-CHPS-GL
 
-## création d'un environement locale all os
+## création d'un environnement local (all os)
 
 ```python
 python3 -m venv env  # à faire une fois
