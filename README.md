@@ -3,9 +3,14 @@
 ## création d'un environement locale all os
 
 ```python
-python -m venv env  # A faire une fois
+python3 -m venv env  # à faire une fois
+#windows
 env/Scripts/Activate.ps1 # env activé, à faire à chaque fois que vous voulez utiliser l'env local
+#Mac OS / Linux
+source env/bin/activate # env activé, à faire à chaque fois que vous voulez utiliser l'env local
+# Pour les deux
 pip install -r requirements.txt # à faire un fois pour installer les modules nécessaires
+# si vous avez une erreur lors de l'installation des modules requits, suffit de mettre à jour votre python vers une version plus récente
 ```
 ## pour quitter l'env locale
 ```python
@@ -17,3 +22,6 @@ une fois votre env activé :
 ```python
 python manage.py runserver
 ```
+
+## Erreur
+Si vous avez des erreurs lors de l'installation je vous conseille de mettre à jour votre python, préviligiez une version récente.
