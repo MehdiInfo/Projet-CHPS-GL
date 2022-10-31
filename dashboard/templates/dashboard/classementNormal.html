@@ -1,0 +1,17 @@
+{% include "header.html" %}
+<title> Classement des bêta testeurs</title>
+</head>  
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="{% url 'clas_Report' %}">Dashboard</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="{% url 'clas_Normal' %}">Classement Bêta testeurs</a></li>
+            <li ><a href="{% url 'clas_Report' %}">Classement Report</a></li>
+        </ul>
+        </div>
+    </nav>
+    
+{% include "footer.html" %}

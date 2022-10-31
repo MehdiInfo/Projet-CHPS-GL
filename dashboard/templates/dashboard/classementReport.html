@@ -1,0 +1,38 @@
+{% include "header.html" %}
+<title> Classement des report</title>
+</head>  
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="{% url 'clas_Report' %}">Dashboard</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li ><a href="{% url 'clas_Normal' %}">Classement Bêta testeurs</a></li>
+            <li class="active"><a href="{% url 'clas_Report' %}">Classement Report</a></li>
+        </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">id_bt</th>
+                <th scope="col">pseudo_bt</th>
+                <th scope="col">id_game</th>
+                <th scope="col">bug_type</th>
+              </tr>
+            </thead>
+            <tbody>
+                {% for item in mes_data %}
+                <tr> 
+                    <td>{{ item.id_bt }}</td>
+                    <td>{{ item.pseudo_bt}}</td>
+                    <td>{{ item.id_game }}</td>
+                    <td>{{ item.bug_type }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% include "footer.html" %}

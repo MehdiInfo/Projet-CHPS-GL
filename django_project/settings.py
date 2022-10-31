@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'report',
     'crispy_forms',
+    'dashboard'
 ]
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
@@ -56,9 +57,11 @@ ROOT_URLCONF = 'django_project.urls'
 
 TEMPLATES = [
     {
+        #rajout des templates
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [os.path.join(BASE_DIR, 'templates'),
                  os.path.join(BASE_DIR, 'report', 'templates', 'report'),
+                 os.path.join(BASE_DIR, 'dashboard', 'templates', 'dashboard'),
                 ],
         'APP_DIRS': True,
         'OPTIONS': {

@@ -1,4 +1,18 @@
-{% include "navbar.html" %}
+{% include "header.html" %}
+<title> Reporter un bug </title>
+</head>  
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="{% url 'index' %}">Report Bug</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="{% url 'index' %}">Report</a></li>
+            <li ><a href="{% url 'classement' %}">Classement</a></li>
+        </ul>
+        </div>
+    </nav>
 {% load crispy_forms_tags %}
 <div class="container">
     {% block content %}
