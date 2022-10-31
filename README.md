@@ -16,7 +16,7 @@ pip install -r requirements.txt # à faire un fois pour installer les modules n�
 ```python
 deactivate
 ```
-## Déployer le serveur
+## Lancer l'appli (doit se faire sous env local)
 
 une fois votre env activé :
 ```python
