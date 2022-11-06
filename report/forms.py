@@ -1,7 +1,12 @@
 from django.forms import ModelForm
-from .models import Report_data
+from .models import  BetaTester, Application
 
-class ReportForm(ModelForm):
+class BTform(ModelForm):
     class Meta:
-        model = Report_data
+        model = BetaTester
+        fields = {'nom','prenom'}
+class Appform(ModelForm):
+    class Meta:
+        model = Application
         fields = '__all__'
+        

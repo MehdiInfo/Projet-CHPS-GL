@@ -17,19 +17,17 @@
         <table class="table">
             <thead>
               <tr>
-                <th scope="col">id_bt</th>
-                <th scope="col">pseudo_bt</th>
-                <th scope="col">id_game</th>
-                <th scope="col">bug_type</th>
+                <th scope="col">Nom</th>
+                <th scope="col">Prénom</th>
+                <th scope="col">Score</th>
               </tr>
             </thead>
             <tbody>
                 {% for item in mes_data %}
                 <tr> 
-                    <td>{{ item.id_bt }}</td>
-                    <td>{{ item.pseudo_bt}}</td>
-                    <td>{{ item.id_game }}</td>
-                    <td>{{ item.bug_type }}</td>
+                    <td>{{ item.nom}}</td>
+                    <td>{{ item.prenom}}</td>
+                    <td>{{ item.score_bug}}</td>
                 </tr>
                 {% endfor %}
             </tbody>
