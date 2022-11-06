@@ -13,5 +13,24 @@
         </ul>
         </div>
     </nav>
-    
+    <div class="container">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Nom</th>
+                <th scope="col">Prénom</th>
+                <th scope="col">Score</th>
+              </tr>
+            </thead>
+            <tbody>
+                {% for item in mes_data %}
+                <tr> 
+                    <td>{{ item.nom}}</td>
+                    <td>{{ item.prenom}}</td>
+                    <td>{{ item.score}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
 {% include "footer.html" %}

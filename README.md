@@ -6,6 +6,8 @@
 python3 -m venv env  # à faire une fois
 #windows
 env/Scripts/Activate.ps1 # env activé, à faire à chaque fois que vous voulez utiliser l'env local
+#En cas d'erreur de droits d'execution de scripts, utiliser cette commande dans le powershell en admin:
+set-executionpolicy unrestricted
 #Mac OS / Linux
 source env/bin/activate # env activé, à faire à chaque fois que vous voulez utiliser l'env local
 # Pour les deux

@@ -2,12 +2,19 @@ from django.db import models
 
 # Create your models here.
 
-class Report_data(models.Model):
-    id_bt = models.IntegerField()
-    pseudo_bt = models.CharField(max_length = 50)
-    id_game = models.IntegerField()
-    bug_type = models.CharField(max_length = 50)
+class BetaTester(models.Model):
+    nom = models.CharField(max_length = 30)
+    prenom = models.CharField(max_length = 30)
+    score = models.IntegerField()
+    score_bug = models.IntegerField()
 
-# pour la classement visible que par les béta testeur
-# rajout d'une table béta testeur
-# rajout d'une table game
+class Application(models.Model):
+    nom_app = models.CharField(max_length=30)
+
+class Bug(models.Model):
+    bug_type = models.CharField(max_length = 50)
+    
+class Report_data(models.Model):
+    id_bt = models.ForeignKey('BetaTester',on_delete=models.DO_NOTHING)
+    id_bug = models.ForeignKey('Bug',on_delete=models.DO_NOTHING)
+    id_game = models.ForeignKey('Application',on_delete=models.DO_NOTHING)
